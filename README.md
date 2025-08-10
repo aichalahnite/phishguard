@@ -32,6 +32,66 @@
 
 ---
 
+## 🧠 What Is Phishing?
+
+**Phishing** is a type of cyberattack where attackers trick individuals into revealing sensitive information such as usernames, passwords, or credit card numbers by pretending to be trustworthy entities (like banks, services, or companies). These scams are often delivered via malicious links in:
+
+* Emails
+* Text messages
+* Social media
+* Fake websites
+
+Clicking on these malicious URLs can lead users to fraudulent websites that appear legitimate but are designed to steal personal data or install malware.
+
+---
+
+## 🛡️ How Google Safe Browsing API Works
+
+PhishGuard uses the **Google Safe Browsing API v4**, a service provided by Google that lets applications check whether URLs are associated with unsafe web resources.
+
+### 🔍 How it works:
+
+1. **Client sends request**:
+
+   * The app submits the URL to Google’s Safe Browsing API.
+   * Request includes threat types like `MALWARE`, `SOCIAL_ENGINEERING`, etc.
+
+2. **Google checks its threat database**:
+
+   * It compares the submitted URL against a constantly updated list of unsafe sites maintained by Google.
+
+3. **API responds**:
+
+   * If the URL matches any threats, it returns a match object.
+   * If no threats are detected, it returns an empty response (interpreted as "safe").
+
+4. **Result is displayed**:
+
+   * Based on the response, the app notifies the user whether the link is **safe** or **unsafe**.
+
+### 🔗 Official Documentation
+
+📚 [Google Safe Browsing API v4 – Documentation](https://developers.google.com/safe-browsing/v4)
+
+This documentation includes:
+
+* API structure
+* Threat types and classifications
+* Authentication setup
+* Quota and usage limits
+
+---
+
+## 📌 Quick Summary
+
+| Term                     | Meaning                                                                 |
+| ------------------------ | ----------------------------------------------------------------------- |
+| **Phishing**             | Fake attempts to trick users into giving up private info via fake links |
+| **Google Safe Browsing** | A service that identifies unsafe websites and warns users               |
+| **Threat Types Used**    | `MALWARE`, `SOCIAL_ENGINEERING` (phishing), and more                    |
+
+---
+
 ## 📱 Screens Overview
 
 ### 🏠 `index.tsx` (Welcome Page)
